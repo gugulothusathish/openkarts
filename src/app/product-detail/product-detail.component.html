@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img *ngIf="sProduct"  [src]="sProduct.imagePath" class="img-responsive">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h2 *ngIf="sProduct">{{ sProduct.name }}</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group" [appManage]="'key:value'">//we can use directive also for property binding 
+            <button class="btn btn-primary dropdown-toggle" type="button" >
+                Manage <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Edit Product</a></li>
+                <li><a href="#">Delete Poduct</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3 *ngIf="sProduct">{{ sProduct.description }}</h3>
+    </div>
+</div>

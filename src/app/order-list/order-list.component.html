@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-10">
+        <hr>
+        <ul class="list-group">
+            <a class="list-group-item clearfix" style="cursor: pointer;"
+            *ngFor="let order of orders"
+            >
+                <div class="pull-left">OrderID: {{ order.orderId }}</div>
+                <div class="pull-right">ProductName:{{ order.productName }}</div>
+            </a>
+        </ul>
+    </div>
+</div>

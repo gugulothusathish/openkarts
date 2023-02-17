@@ -1,0 +1,14 @@
+<div class="row">
+<div class="col-xs-12">
+    <button class="btn btn-success">New Product</button>
+</div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-10">
+         <app-product-item 
+            *ngFor="let p of products" 
+            [product]="p">
+         </app-product-item>
+    </div>
+</div>

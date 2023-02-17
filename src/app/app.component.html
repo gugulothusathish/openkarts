@@ -1,0 +1,32 @@
+<app-header (onHeaderClickEvent)="onAppHeaderClick($event)"></app-header>
+
+<h1>Welcome to Gugulothu sathish</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5">
+            <app-product-list 
+                *ngIf="selectLink=='productlist'"
+                >
+            </app-product-list>
+        </div>
+        <div class="col-md-7">
+            <app-product-detail 
+                *ngIf="selectLink=='productlist'"
+                [sProduct]="selectedProduct"
+                >
+            </app-product-detail>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <app-order-list *ngIf="selectLink=='orders'"></app-order-list>
+        </div>
+      
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <app-register-form *ngIf="selectLink=='register'"></app-register-form>
+        </div>
+      
+    </div>
+</div>
